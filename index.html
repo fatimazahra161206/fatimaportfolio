@@ -76,6 +76,8 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:var(--navy);padding:1
 .phead{background:var(--navy);padding:1.6rem 2rem;display:flex;align-items:center;gap:1rem;}
 .pcard.feat{grid-column:1/-1;}
 .pcard.feat .phead{background:linear-gradient(135deg,#1a0f08,var(--navy));padding:2.2rem;}
+/* Special gold gradient for Sultaan card */
+.pcard.sultaan .phead{background:linear-gradient(135deg,#1a0f00,#2d1a00);padding:2.2rem;border-bottom:2px solid #c9a84c;}
 .pic{font-size:1.8rem;}
 .ptyp{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;}
 .pbody{padding:1.6rem;}
@@ -89,6 +91,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:var(--navy);padding:1
 .plink.gh{color:var(--gray);border-color:var(--gray);}
 .plink.gh:hover{color:var(--navy);border-color:var(--navy);}
 .lbadge{background:var(--rose);color:white;font-size:.62rem;padding:.18rem .55rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-left:auto;}
+.lbadge.new{background:linear-gradient(135deg,#c9a84c,#a07830);color:#1a0f00;}
 #offer{background:var(--navy);}
 #offer .slbl{color:var(--gold);}
 #offer .stitle{color:var(--cream);}
@@ -132,6 +135,7 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
   #hero{padding:6rem 1.5rem 3rem;}
   .agrid,.cgrid{grid-template-columns:1fr;gap:2.5rem;}
   .pcard.feat{grid-column:auto;}
+  .pcard.sultaan{grid-column:auto;}
   footer{grid-template-columns:1fr;gap:2rem;}
 }
 </style>
@@ -244,14 +248,13 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
         <p>A complete luxury salon website. Includes: hero, full services &amp; pricing, booking form (connected to Gmail), customer reviews, WhatsApp &amp; email contact buttons, gallery section, and professional footer. Fully mobile-responsive. This is an example of what I can build for any salon.</p>
         <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
         <div class="plnks">
-          <!-- After Vercel deploy, replace "salon.html" with live URL e.g. https://noor-salon.vercel.app -->
           <a href="salon.html" target="_blank" class="plink">View Salon Website →</a>
           <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
-    <!-- RESTAURANT SITE -->
+    <!-- ZAIQA RESTAURANT -->
     <div class="pcard feat">
       <div class="phead">
         <div class="pic">🍽️</div>
@@ -263,13 +266,31 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
         <p>A full restaurant website with 5-tab menu (Starters, Mains, BBQ, Desserts, Drinks), Chef's Specials, table reservation form (connected to Gmail), reviews, WhatsApp &amp; email contact, and footer. Unique warm amber aesthetic. Fully mobile-responsive. Example for any restaurant client.</p>
         <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Formspree</span><span class="ptag">WhatsApp</span><span class="ptag">Responsive</span></div>
         <div class="plnks">
-          <!-- After Vercel deploy, replace "restaurant.html" with live URL e.g. https://zaiqa-restaurant.vercel.app -->
           <a href="restaurant.html" target="_blank" class="plink">View Restaurant Website →</a>
           <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">GitHub ↗</a>
         </div>
       </div>
     </div>
 
+    <!-- ⭐ SULTAAN RESTAURANT — NEW -->
+    <div class="pcard sultaan feat">
+      <div class="phead">
+        <div class="pic">👑</div>
+        <div><div class="ptyp">Web Dev · Premium Restaurant Demo</div></div>
+        <div class="lbadge new">⭐ Upgraded</div>
+      </div>
+      <div class="pbody">
+        <h3>Sultaan Restaurant — Luxury Fine Dining Website</h3>
+        <p>A premium restaurant website featuring a fullscreen autoplay video background hero (auto-cycles 4 videos), animated menu tabs, scroll reveal animations, food gallery with hover effects, Chef's Specials, table reservation form, and floating WhatsApp button. Built with a warm gold &amp; dark brown luxury aesthetic — inspired by top Pakistani fine dining restaurants.</p>
+        <div class="ptags"><span class="ptag">HTML5</span><span class="ptag">CSS3</span><span class="ptag">JavaScript</span><span class="ptag">Video BG</span><span class="ptag">Scroll Animations</span><span class="ptag">Unsplash</span><span class="ptag">Responsive</span></div>
+        <div class="plnks">
+          <a href="sultaan.html" target="_blank" class="plink">View Sultaan Website →</a>
+          <a href="https://github.com/fatimazahra161206/portfolio" target="_blank" class="plink gh">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- GAMES -->
     <div class="pcard">
       <div class="phead"><div class="pic">✊</div><div class="ptyp">Game Development</div></div>
       <div class="pbody">
@@ -299,6 +320,7 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
         <div class="plnks"><a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20to%20collaborate." target="_blank" class="plink">Collaborate →</a></div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -345,13 +367,6 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
         </a>
       </div>
     </div>
-    <!--
-      SETUP FORMSPREE (free):
-      1. Go to formspree.io — sign up with fatimazahra.161206@gmail.com
-      2. Create a new form, copy your Form ID
-      3. Replace YOUR_FORM_ID below with your real ID
-      4. Messages will arrive in your Gmail!
-    -->
     <form class="cform" id="cForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="hidden" name="_subject" value="New Message — Fatima tu Zahra Portfolio">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -376,9 +391,9 @@ footer{background:var(--navy);padding:3rem 4rem;display:grid;grid-template-colum
   </div>
   <div class="fc">
     <h4>My Work &amp; Links</h4>
-    <!-- Replace these with Vercel live URLs after hosting -->
     <a href="salon.html" target="_blank">💄 Noor Salon Website</a>
     <a href="restaurant.html" target="_blank">🍽️ Zaiqa Restaurant Website</a>
+    <a href="sultaan.html" target="_blank">👑 Sultaan Restaurant Website</a>
     <a href="https://github.com/fatimazahra161206/portfolio" target="_blank">💻 GitHub Profile</a>
     <a href="https://wa.me/923295787944" target="_blank">📱 WhatsApp: +92 329 578 7944</a>
     <a href="mailto:fatimazahra.161206@gmail.com">📧 Gmail</a>
