@@ -22,10 +22,10 @@
   --r:8px;--r2:14px;--r3:20px;--r4:28px;
 }
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:var(--bg);color:var(--tx);font-family:'Cabinet Grotesk',sans-serif;overflow-x:hidden;cursor:none}
+body{cursor:none;background:var(--bg);color:var(--tx);font-family:'Cabinet Grotesk',sans-serif;overflow-x:hidden;cursor:pointer}
 img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-button{cursor:none;font-family:'Cabinet Grotesk',sans-serif}
+a{text-decoration:none;color:inherit;cursor:pointer;pointer-events:auto}
+button{cursor:pointer;pointer-events:auto;font-family:'Cabinet Grotesk',sans-serif}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-thumb{background:var(--p);border-radius:2px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -172,7 +172,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 #services{padding:6rem 3rem;background:var(--bg2);border-top:1px solid rgba(129,140,248,.06);border-bottom:1px solid rgba(129,140,248,.06)}
 #services .sec{max-width:1100px}
 .serv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:3rem}
-.sv{background:var(--s1);border:1px solid rgba(129,140,248,.08);border-radius:var(--r3);padding:1.5rem;text-align:center;transition:all .25s;cursor:none}
+.sv{background:var(--s1);border:1px solid rgba(129,140,248,.08);border-radius:var(--r3);padding:1.5rem;text-align:center;transition:all .25s;cursor:pointer}
 .sv:hover{border-color:rgba(129,140,248,.25);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.3)}
 .sv-ico{font-size:32px;margin-bottom:.9rem}
 .sv-name{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:.6rem}
@@ -189,7 +189,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .ct-l2{display:block;background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic}
 .ct-sub{font-size:16px;color:var(--mu);max-width:420px;margin:0 auto 3rem;line-height:1.75;position:relative;z-index:1}
 .ct-cards{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
-.ctc{background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r3);padding:1.4rem 1.8rem;min-width:175px;transition:all .25s;text-decoration:none;display:flex;flex-direction:column;align-items:center;cursor:none}
+.ctc{background:var(--s1);border:1px solid rgba(129,140,248,.1);border-radius:var(--r3);padding:1.4rem 1.8rem;min-width:175px;transition:all .25s;text-decoration:none;display:flex;flex-direction:column;align-items:center;cursor:pointer}
 .ctc:hover{border-color:rgba(129,140,248,.3);transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
 .ctc-ico{font-size:22px;margin-bottom:.4rem}
 .ctc-l{font-size:11px;color:var(--mu);margin-bottom:.15rem;font-weight:500}
@@ -222,6 +222,7 @@ footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex
 
 /* ── MOBILE ── */
 @media(max-width:900px){
+  body{cursor:auto}#cur,#curR{display:none!important}
   nav .nm,.nc{display:none}
   .hb{display:flex;align-items:center;justify-content:center}
   .sec{padding:5rem 1.5rem}
@@ -272,9 +273,7 @@ footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20a%20project." target="_blank">
-    <button class="nc">WhatsApp Me</button>
-  </a>
+  <button class="nc" onclick="window.open('https://wa.me/923295787944?text=Hi%20Fatima!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20a%20project.','_blank')">WhatsApp Me</button>
 </nav>
 
 <!-- ══════════ HERO ══════════ -->
@@ -291,9 +290,9 @@ footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex
       Web &amp; Game Developer building real websites for real businesses.
     </p>
     <div class="h-btns">
-      <a href="#projects"><button class="btn-p">View My Work</button></a>
-      <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20a%20website%20for%20my%20business." target="_blank"><button class="btn-wa">WhatsApp Me</button></a>
-      <a href="#contact"><button class="btn-o">Hire Me</button></a>
+      <button class="btn-p" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+      <button class="btn-wa" onclick="window.open('https://wa.me/923295787944?text=Hi%20Fatima!%20I%20want%20a%20website%20for%20my%20business.','_blank')">WhatsApp Me</button>
+      <button class="btn-o" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
     </div>
     <div class="h-stats">
       <div class="hs"><div class="hs-n">2nd</div><div class="hs-l">Semester</div></div>
@@ -320,8 +319,8 @@ footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex
         <p><b>Looking for:</b> Part-time &amp; freelance website projects for restaurants, salons, and local businesses in Rawalpindi / Islamabad and online.</p>
       </div>
       <div style="display:flex;gap:.75rem;flex-wrap:wrap">
-        <a href="https://wa.me/923295787944" target="_blank"><button class="btn-wa" style="font-size:13px;padding:.55rem 1.4rem">WhatsApp</button></a>
-        <a href="mailto:fatimazahra.161206@gmail.com"><button class="btn-o" style="font-size:13px;padding:.53rem 1.4rem">Email Me</button></a>
+        <button class="btn-wa" style="font-size:13px;padding:.55rem 1.4rem" onclick="window.open('https://wa.me/923295787944','_blank')">WhatsApp</button>
+        <button class="btn-o" style="font-size:13px;padding:.53rem 1.4rem" onclick="window.location.href='mailto:fatimazahra.161206@gmail.com'">Email Me</button>
       </div>
     </div>
     <div class="quick-info rv d2">
@@ -524,8 +523,8 @@ footer{border-top:1px solid rgba(129,140,248,.07);padding:2rem 3rem;display:flex
     <div class="serv-cta rv">
       <p>Interested? I respond fast — usually within a few hours!</p>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="https://wa.me/923295787944?text=Hi%20Fatima!%20I%20need%20a%20website%20for%20my%20business." target="_blank"><button class="btn-wa">WhatsApp Me Now</button></a>
-        <a href="mailto:fatimazahra.161206@gmail.com?subject=Website%20Project%20Enquiry"><button class="btn-o">Email Me</button></a>
+        <button class="btn-wa" onclick="window.open('https://wa.me/923295787944?text=Hi%20Fatima!%20I%20need%20a%20website%20for%20my%20business.','_blank')">WhatsApp Me Now</button>
+        <button class="btn-o" onclick="window.location.href='mailto:fatimazahra.161206@gmail.com?subject=Website%20Project%20Enquiry'">Email Me</button>
       </div>
     </div>
   </div>
